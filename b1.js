@@ -53,7 +53,7 @@ localStorage.setItem('listProduct', JSON.stringify(product));
 }
 //lấy sản phẩm
 function load() {
-productss = JSON.parse(localStorage.getItem('listProduct'));
+  product = JSON.parse(localStorage.getItem('listProduct'));
 }
 //xuất sản phẩm ra html
 if (localStorage.getItem('listProduct') != null) {
@@ -61,8 +61,8 @@ load();
 }
 var listLocal = function() {
 var listproduct = '';
-for (var i in productss) {
-var data = JSON.parse(JSON.stringify(productss[i]));
+for (var i in product) {
+var data = JSON.parse(JSON.stringify(product[i]));
 
 var listproduct = '<div class="col-lg-3 col-md-6 col-sm-6 col-6 mt-3">';
 listproduct += '<div class="card product p-2" styte="width:auto">';
